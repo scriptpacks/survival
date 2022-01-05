@@ -7,7 +7,7 @@ __config() -> {
   'libraries' -> [
     {
       'source' -> '/mniuzo/swapitem.sc',
-      'target' -> 'scriptpacks/mniuzo/swapitem.sc'
+      'target' -> 'swapitem.scl'
     }
   ]
 }
