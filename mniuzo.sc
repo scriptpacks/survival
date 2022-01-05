@@ -25,22 +25,21 @@ __config() -> {
     }
 };
 
-print(format('l Script Pack "'+app_name+'" loaded'));
+global_app_name = system_info('app_name');
+print(format('l Script Pack "'+global_app_name+'" loaded'));
 
 uninstall() -> (
-    app_name = system_info('app_name');
     for(global_scripts,
         run('script remove '+_);
     );
-    run('script remove '+app_name);
-    run('script unload '+app_name);
-    print(format('r Script Pack "'+app_name+'" uninstalled'))
+    run('script remove '+global_app_name);
+    run('script unload '+global_app_name);
+    print(format('r Script Pack "'+global_app_name+'" uninstalled'))
 );
 
 __on_close() -> (
-    app_name = system_info('app_name');
     for(global_scripts,
         run('script unload '+_);
     );
-    print(format('r Script Pack "'+app_name+'" unloaded'))
+    print(format('r Script Pack "'+global_app_name+'" unloaded'))
 )
