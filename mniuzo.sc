@@ -12,7 +12,7 @@ global_scripts = [
     'skull',
 ];
 
-global_scriptpack = map(scripts,{'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/'+_+'.sc'});
+global_scriptpack = map(global_scripts, {'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/'+_+'.sc'});
 
 __config() -> {
     'requires' -> {
