@@ -7,7 +7,7 @@ __config() -> {
   'libraries' -> [
     {
       'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/swapitem.sc',
-      'target' -> 'swapitem.scl'
+      'target' -> 'swapitem.sc'
     }
   ]
 }
