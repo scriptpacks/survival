@@ -1,13 +1,41 @@
+scripts = [
+    'swapitem',
+    'silkyblockstates',
+    'specialnametags',
+    'treecapitator',
+    'placeableplants',
+    'villagerleash',
+    'prunedplants',
+    'villagerleash',
+    'pillagerleash',
+    'betteritemframes',
+    'skull',
+];
+
+global_scriptpack = map(scripts,{'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/'+_+'.sc'});
+
 __config() -> {
-  'requires' -> {
-    'carpet' -> '>=1.4.33',
-    'minecraft' -> '>=1.17'
-  },
-  'command_permission' -> 'ops',
-  'libraries' -> [
-    {
-      'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/swapitem.sc',
-      'target' -> 'swapitem.sc'
+    'requires' -> {
+        'carpet' -> '>=1.4.33',
+        'minecraft' -> '>=1.17'
+    },
+    'command_permission' -> 'ops',
+    'libraries' -> global_scriptpack,
+    'commands' -> {
+        'uninstall' -> 'uninstall'
     }
-  ]
-}
+};
+
+uninstall() -> (
+    for(scripts,
+        run('script remove '+_);
+    );
+    'script remove '+system_info('app_name');
+    'script unload '+system_info('app_name');
+);
+
+__on_close() -> (
+    for(scripts,
+        run('script unload '+_);
+    );
+)
