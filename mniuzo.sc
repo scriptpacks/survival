@@ -26,6 +26,8 @@ __config() -> {
     }
 };
 
+print(format('l Script Pack "'+app_name+'" loaded'));
+
 uninstall() -> (
     app_name = system_info('app_name');
     for(global_scripts,
@@ -33,7 +35,7 @@ uninstall() -> (
     );
     run('script remove '+app_name);
     run('script unload '+app_name);
-    print(format('r Script Pack "'+app_name+'" uninstalled.'))
+    print(format('r Script Pack "'+app_name+'" uninstalled'))
 );
 
 __on_close() -> (
@@ -41,5 +43,5 @@ __on_close() -> (
     for(global_scripts,
         run('script unload '+_);
     );
-    print(format('r Script Pack "'+app_name+'" unloaded.'))
+    print(format('r Script Pack "'+app_name+'" unloaded'))
 )
