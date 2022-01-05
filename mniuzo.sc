@@ -1,4 +1,4 @@
-scripts = [
+global_scripts = [
     'swapitem',
     'silkyblockstates',
     'specialnametags',
@@ -27,7 +27,7 @@ __config() -> {
 };
 
 uninstall() -> (
-    for(scripts,
+    for(global_scripts,
         run('script remove '+_);
     );
     'script remove '+system_info('app_name');
@@ -35,7 +35,7 @@ uninstall() -> (
 );
 
 __on_close() -> (
-    for(scripts,
+    for(global_scripts,
         run('script unload '+_);
     );
 )
