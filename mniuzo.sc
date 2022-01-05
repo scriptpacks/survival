@@ -6,8 +6,8 @@ __config() -> {
   'command_permission' -> 'ops',
   'libraries' -> [
     {
-      'source' -> '/mniuzo/swapitem.sc',
-      'target' -> 'swapitem.sc'
+      'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/swapitem.sc',
+      'target' -> 'swapitem.scl'
     }
   ]
 }
