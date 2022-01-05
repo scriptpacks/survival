@@ -1,15 +1,14 @@
 global_scripts = [
-    'swapitem',
-    'silkyblockstates',
-    'specialnametags',
-    'treecapitator',
-    'placeableplants',
-    'villagerleash',
-    'prunedplants',
-    'villagerleash',
-    'pillagerleash',
     'betteritemframes',
+    'pillagerleash',
+    'placeableplants',
+    'prunedplants',
+    'silkyblockstates',
     'skull',
+    'specialnametags',
+    'swapitem',
+    'treecapitator',
+    'villagerleash',
 ];
 
 global_scriptpack = map(global_scripts, {'source' -> 'https://raw.githubusercontent.com/BisUmTo/scarpet/master/'+_+'.sc'});
