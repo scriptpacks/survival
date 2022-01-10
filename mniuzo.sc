@@ -1,5 +1,6 @@
 global_scripts = [
     'betteritemframes',
+    'debugstick',
     'pillagerleash',
     'placeableplants',
     'prunedplants',
