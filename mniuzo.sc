@@ -38,9 +38,9 @@ uninstall() -> (
     print(format('r Script Pack "'+global_app_name+'" uninstalled'))
 );
 
-__on_close() -> (
-    for(global_scripts,
-        run('script unload '+_);
-    );
-    print(format('r Script Pack "'+global_app_name+'" unloaded'))
-)
+//__on_close() -> (
+//    for(global_scripts,
+//        run('script unload '+_);
+//    );
+//    print(format('r Script Pack "'+global_app_name+'" unloaded'))
+//)
