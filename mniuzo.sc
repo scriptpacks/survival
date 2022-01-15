@@ -8,6 +8,7 @@ global_scripts = [
     'prunedplants',
     'silkyblockstates',
     'skull',
+    'sitanywhere',
     'specialnametags',
     'swapitem',
     'treecapitator',
