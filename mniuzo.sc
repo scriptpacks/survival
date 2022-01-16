@@ -2,6 +2,7 @@ global_scripts = [
     'betteritemframes',
     'debugstick',
     'floatingladders',
+    'endermannogrief',
     'lookme',
     'pillagerleash',
     'placeableplants',
