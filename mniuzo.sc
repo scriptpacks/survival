@@ -3,6 +3,7 @@ global_scripts = [
     'debugstick',
     'floatingladders',
     'endermannogrief',
+    'light',
     'lookme',
     'pillagerleash',
     'placeableplants',
