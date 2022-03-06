@@ -22,7 +22,10 @@ __config() -> {
     'command_permission' -> 'ops',
     'libraries' -> global_scriptpack,
     'commands' -> {
-        'uninstall' -> 'uninstall'
+        'uninstall' -> 'uninstall',
+        'install' -> ['install',false],
+        'install survival' -> ['install',false],
+        'install creative' -> ['install',true]
     }
 };
 
@@ -36,6 +39,63 @@ uninstall() -> (
     run('script remove '+global_app_name);
     run('script unload '+global_app_name);
     print(format('r Script Pack "'+global_app_name+'" uninstalled'))
+);
+
+install(creative) -> for([
+    // STAT COMMAND
+    _(c)->'/carpet scriptsAppStore CommandLeo/scarpet/contents/programs',
+    _(c)->'/script download stat.sc',
+
+    // CARPET
+    _(c)->'/carpet setDefault antiCheatDisabled true',
+    _(c)->'/carpet setDefault defaultLoggers mobcaps,tps',
+    _(c)->'/carpet setDefault flippinCactus true',
+    _(c)->'/carpet setDefault lagFreeSpawning true',
+    _(c)->'/carpet setDefault missingTools true',
+    _(c)->'/carpet setDefault renewableSponges true',
+    _(c)->'/carpet setDefault stackableShulkerBoxes 16',
+    _(c)->'/carpet setDefault xpNoCooldown true',
+    _(c)->'/carpet setDefault updateSuppressionCrashFix true',
+    _(c)->'/carpet setDefault commandScript ops',
+    _(c)->if(c,'/carpet setDefault liquidDamageDisabled true'),
+    
+    // CARPET EXTRA
+    _(c)->'/carpet setDefault accurateBlockPlacement true',
+    _(c)->'/carpet setDefault blockStateSyncing true',
+    
+    // CARPET FIXES
+    _(c)->'/carpet-fixes setDefault sleepingResetsThunderFix true',
+    
+    // CARPET TIS
+    _(c)->'/carpet setDefault fakePlayerNamePrefix bot_',
+    _(c)->if(!c,'/carpet setDefault opPlayerNoCheat true'),
+    _(c)->if(c,'/carpet setDefault blockPlacementIgnoreEntity true'),
+    _(c)->if(c,'/carpet setDefault commandLifeTime true'),
+    _(c)->if(c,'/carpet setDefault creativeOpenContainerForcibly true'),
+    _(c)->if(c,'/carpet setDefault enchantCommandNoRestriction true'),
+    _(c)->if(c,'/carpet setDefault hopperCountersUnlimitedSpeed true'),
+    
+    // RUG
+    _(c)->'/carpet setDefault campSleeping true',
+    _(c)->'/carpet setDefault unpackableIce 9',
+    _(c)->if(c,'/carpet setDefault reachDistance 10'),
+    
+    // ESSENTIAL ADDONS
+    _(c)->'/carpet setDefault commandCameraMode true',
+    _(c)->'/carpet setDefault cameraModeSurvivalRestrictions true',
+    _(c)->'/carpet setDefault editableSigns true',
+    _(c)->'/carpet setDefault reloadFakePlayerActions true',
+    _(c)->'/carpet setDefault reloadFakePlayers true',
+    _(c)->'/carpet setDefault essentialCarefulBreak true',
+    
+    // PLUSLS CARPET ADDITION
+    _(c)->'/carpet setDefault pcaSyncProtocol true',
+    _(c)->'/carpet setDefault pcaSyncPlayerEntity ops'
+],
+    result=run(command = call(_, creative));
+    if(!result:0 && command,
+        logger('warn', 'Error running "'+command+'"')
+    )
 );
 
 //__on_close() -> (
