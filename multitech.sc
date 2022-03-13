@@ -1,9 +1,11 @@
 global_scripts = [
     'betteritemframes',
     'endermannogrief',
+    'fastredstonerecipes',
     'horsestats',
     'lookme',
     'placeableplants',
+    'playerheadrecipe',
     'prunedplants',
     'ropes',
     'skull',
@@ -16,8 +18,13 @@ global_scriptpack = map(global_scripts, {'source' -> 'https://raw.githubusercont
 
 __config() -> {
     'requires' -> {
-        'carpet' -> '>=1.4.33',
-        'minecraft' -> '>=1.17'
+        'carpet' -> '>=1.4.66',
+        'minecraft' -> '>=1.18.2',
+        'carpet-extra' -> '>=1.4.64',
+        'carpet-tis-addition' -> '>=1.30.0',
+        'essentialaddons' -> '>=1.18.2-1.1.1',
+        'pca' -> '>=0.2.5-beta+8e41bb1',
+        'rug' -> '>=1.18.2-1.2.1'
     },
     'command_permission' -> 'ops',
     'libraries' -> global_scriptpack,
@@ -26,7 +33,8 @@ __config() -> {
         'install' -> ['install',false],
         'install survival' -> ['install',false],
         'install creative' -> ['install',true]
-    }
+    },
+    'scope' -> 'global'
 };
 
 global_app_name = system_info('app_name');
