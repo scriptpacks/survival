@@ -50,6 +50,9 @@ uninstall() -> (
 );
 
 install(creative) -> for([
+    
+    _(c)->'/gamerule playerSleepengPercentage 0',
+    
     // STAT COMMAND
     _(c)->'/carpet scriptsAppStore CommandLeo/scarpet/contents/programs',
     _(c)->'/script download stat.sc',
@@ -66,6 +69,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault updateSuppressionCrashFix true',
     _(c)->'/carpet setDefault commandScript ops',
     _(c)->if(c,'/carpet setDefault liquidDamageDisabled true'),
+    _(c)->'/carpet setdefault commandPlayer true',
     
     // CARPET EXTRA
     _(c)->'/carpet setDefault accurateBlockPlacement true',
