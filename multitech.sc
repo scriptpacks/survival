@@ -51,7 +51,7 @@ uninstall() -> (
 
 install(creative) -> for([
     
-    _(c)->'/gamerule playerSleepengPercentage 0',
+    _(c)->'/gamerule playerSleepingPercentage 0',
     
     // STAT COMMAND
     _(c)->'/carpet scriptsAppStore CommandLeo/scarpet/contents/programs',
