@@ -69,7 +69,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault updateSuppressionCrashFix true',
     _(c)->'/carpet setDefault commandScript ops',
     _(c)->if(c,'/carpet setDefault liquidDamageDisabled true'),
-    _(c)->'/carpet setdefault commandPlayer true',
+    _(c)->'/carpet setDefault commandPlayer true',
     
     // CARPET EXTRA
     _(c)->'/carpet setDefault accurateBlockPlacement true',
