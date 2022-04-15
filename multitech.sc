@@ -79,8 +79,8 @@ install(creative) -> for([
     _(c)->'/carpet-fixes setDefault sleepingResetsThunderFix true',
     
     // CARPET TIS
-    _(c)->'/carpet setDefault fakePlayerNamePrefix bot_',
-    _(c)->if(!c,'/carpet setDefault opPlayerNoCheat true'),
+    _(c)->'/carpet setDefault fakePlayerNamePrefix #none'),
+    _(c)->if(!c,'/carpet setDefault opPlayerNoCheat false'),
     _(c)->if(c,'/carpet setDefault blockPlacementIgnoreEntity true'),
     _(c)->if(c,'/carpet setDefault commandLifeTime true'),
     _(c)->if(c,'/carpet setDefault creativeOpenContainerForcibly true'),
