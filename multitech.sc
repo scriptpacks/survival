@@ -64,7 +64,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault lagFreeSpawning true',
     _(c)->'/carpet setDefault missingTools true',
     _(c)->'/carpet setDefault renewableSponges true',
-    _(c)->'/carpet setDefault stackableShulkerBoxes 16',
+    _(c)->'/carpet setDefault stackableShulkerBoxes 64',
     _(c)->'/carpet setDefault xpNoCooldown true',
     _(c)->'/carpet setDefault updateSuppressionCrashFix true',
     _(c)->'/carpet setDefault commandScript ops',
