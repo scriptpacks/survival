@@ -79,6 +79,7 @@ install(creative) -> for([
     _(c)->'/carpet-fixes setDefault sleepingResetsThunderFix true',
     _(c)->'/carpet-fixes setDefault delayBetweenAutoSaves 1200',
     _(c)->'/carpet-fixes setDefault beeNotLeavingHiveFix true',
+    _(c)->'/carpet-fixes setDefault reIntroduceFallingBlockEntityPhase true',
     
     // CARPET TIS
     _(c)->'/carpet setDefault fakePlayerNamePrefix bot_',
@@ -104,7 +105,7 @@ install(creative) -> for([
     
     // PLUSLS CARPET ADDITION
     _(c)->'/carpet setDefault pcaSyncProtocol true',
-    _(c)->'/carpet setDefault pcaSyncPlayerEntity ops'
+    _(c)->'/carpet setDefault pcaSyncPlayerEntity true'
 ],
     result=run(command = call(_, creative));
     if(!result:0 && command,
