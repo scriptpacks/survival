@@ -79,7 +79,7 @@ install(creative) -> for([
     _(c)->'/carpet-fixes setDefault sleepingResetsThunderFix true',
     _(c)->'/carpet-fixes setDefault delayBetweenAutoSaves 1200',
     _(c)->'/carpet-fixes setDefault beeNotLeavingHiveFix true',
-    _(c)->'/reIntroduceFallingBlockEntityPhase true',
+    _(c)->'/carpet-fixes reIntroduceFallingBlockEntityPhase true',
     
     // CARPET TIS
     _(c)->'/carpet setDefault fakePlayerNamePrefix bot_',
