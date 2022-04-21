@@ -105,7 +105,7 @@ install(creative) -> for([
     
     // PLUSLS CARPET ADDITION
     _(c)->'/carpet setDefault pcaSyncProtocol true',
-    _(c)->'/carpet setDefault pcaSyncPlayerEntity true'
+    _(c)->'/carpet setDefault pcaSyncPlayerEntity everyone'
 ],
     result=run(command = call(_, creative));
     if(!result:0 && command,
