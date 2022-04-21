@@ -70,7 +70,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault commandScript ops',
     _(c)->if(c,'/carpet setDefault liquidDamageDisabled true'),
     _(c)->'/carpet setDefault commandPlayer true',
-    _(c)->'/carpet setDefault ctrlQCraftingFix true
+    _(c)->'/carpet setDefault ctrlQCraftingFix true',
     
     // CARPET EXTRA
     _(c)->'/carpet setDefault accurateBlockPlacement true',
