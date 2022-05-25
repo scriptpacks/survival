@@ -103,6 +103,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault reloadFakePlayerActions true',
     _(c)->'/carpet setDefault reloadFakePlayers true',
     _(c)->'/carpet setDefault essentialCarefulBreak true',
+    _(c)->'/carpet setDefault stackableShulkersInPlayerInventories true',
     
     // PLUSLS CARPET ADDITION
     _(c)->'/carpet setDefault pcaSyncProtocol true',
