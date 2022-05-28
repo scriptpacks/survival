@@ -95,6 +95,7 @@ install(creative) -> for([
     _(c)->'/carpet setDefault campSleeping true',
     _(c)->'/carpet setDefault unpackableIce 9',
     _(c)->if(c,'/carpet setDefault reachDistance 10'),
+    _(c)->'/carpet setDefault dragonDrops dragon_egg',
     
     // ESSENTIAL ADDONS
     _(c)->'/carpet setDefault commandCameraMode true',
