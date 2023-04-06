@@ -22,7 +22,7 @@ __config() -> {
         'minecraft' -> '>=1.18.2',
         'carpet-extra' -> '>=1.4.64',
         'carpet-tis-addition' -> '>=1.30.0',
-        'essential addons' -> '>=1.18.2-1.2.1',
+        //'essential addons' -> '>=1.18.2-1.2.1',
         'pca' -> '>=0.2.5-beta+8e41bb1',
         'rug' -> '>=1.18.2-1.2.1'
     },
